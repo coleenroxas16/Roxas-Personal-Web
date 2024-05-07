@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Select menu icon, navbar, and menu items
     const menuIcon = document.querySelector('#menu-icon');
     const navbar = document.querySelector('.navbar');
-    const menuItems = document.querySelectorAll('.navbar a');
+    const menuItems = document.querySelectorAll('.navbar .nav-link');
     const emailInput = document.querySelector('input[name="email"]'); // Select the email input field
 
     // Function to open the navbar
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionHeight = section.clientHeight;
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 const id = section.getAttribute('id');
-                const correspondingMenuItem = document.querySelector(`.navbar a[href="#${id}"]`);
+                const correspondingMenuItem = document.querySelector(`.navbar .nav-link[href="#${id}"]`);
                 // Remove 'active' class from all menu items
                 menuItems.forEach(item => item.classList.remove('active'));
                 // Add 'active' class to the corresponding menu item
@@ -73,6 +73,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Listen for scroll events to update the active navbar link
     window.addEventListener('scroll', setActiveMenuItem);
-
 });
-
