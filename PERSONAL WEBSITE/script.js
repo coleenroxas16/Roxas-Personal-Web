@@ -51,46 +51,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Set 'active' class for the current page's menu item
-    const path = window.location.pathname;
-    const page = path.split("/").pop().replace(".html", ""); // Get current page name without extension
-    menuItems.forEach((menuItem) => {
-        const href = menuItem.getAttribute('href').substring(1);
-        if (href === page) {
-            menuItem.classList.add('active');
-        }
-    });
-
-    // Close the navbar when window is resized (for smaller screens)
-    window.addEventListener('resize', () => {
-        if (window.innerWidth <= 895) {
-            // Close navbar when window width is smaller than or equal to 895px
-            closeNavbar();
-        }
-    });
-
-    // Function to get sender email
-    function getSenderEmail() {
-        if (emailInput) {
-            return emailInput.value; 
-        } else {
-            // Handle the case where emailInput is not available
-            return '';
-        }
+    // Set 'active' class for the current page's menu item based on scroll position
+    function setActiveMenuItem() {
+        const scrollPosition = window.scrollY;
+        const sections = document.querySelectorAll('section');
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                const id = section.getAttribute('id');
+                const correspondingMenuItem = document.querySelector(`.navbar a[href="#${id}"]`);
+                // Remove 'active' class from all menu items
+                menuItems.forEach(item => item.classList.remove('active'));
+                // Add 'active' class to the corresponding menu item
+                if (correspondingMenuItem) {
+                    correspondingMenuItem.classList.add('active');
+                }
+            }
+        });
     }
 
-    // Send email when contact form is submitted
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+    // Listen for scroll events to update the active navbar link
+    window.addEventListener('scroll', setActiveMenuItem);
 
-        const senderEmail = getSenderEmail();
-
-        emailjs.sendForm('service_gny9rqq', 'template_8pga0z8', this, 'EKXZWpRsqXRK3nFWK')
-            .then(function(response) {
-                console.log('Email sent successfully:', response);
-            }, function(error) {
-                console.error('Email sending failed:', error);
-            });
-    });
 });
+
