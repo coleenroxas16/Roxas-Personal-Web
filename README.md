@@ -1,1 +1,3 @@
-# Roxas-Personal-Web-INF221
+# Hi! I am Princess Coleen Roxas
+
+Welcome to my Simple Responsive Personal Website.
