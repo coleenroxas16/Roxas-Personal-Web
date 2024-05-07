@@ -17,6 +17,9 @@ Welcome to my Simple Responsive Personal Website.
 ![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/95044889-4cc2-4ece-814f-f8cb5836f2cb)
 ![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/bda52c18-5632-456d-b17f-eeed12f7c8e0)
 ![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/2e0514e7-0e2b-4bc9-9c6c-776d63766923)
+![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/993cadda-d2bf-4080-b1e9-baf28aa83728)
+![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/e6b8c952-bd84-4a8b-873c-6e577aee4d5c)
+
 
 
 
