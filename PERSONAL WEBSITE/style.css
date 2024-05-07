@@ -24,6 +24,7 @@ body {
     color: var(--text-color);
 }
 .header{
+    font-size: 3rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -37,7 +38,7 @@ body {
     z-index: 100;
 }
 .logo{
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--text-color);
     font-weight: 800;
     cursor:  pointer;
@@ -50,22 +51,28 @@ body {
     text-shadow: 0 0 25px var(--main-color);
 }
 .navbar a{
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: white;
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
-.navbar a:hover,
+.navbar a:hover{
 .navbar a.active{
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
+}
+.navbar.active {
+    display: flex;
+    flex-direction: column;
+}
 #menu-icon{
-    font-size: 3.6rem;
+    font-size: 4rem;
     color: var(--main-color);
-    display: none;
+    display: block;
+    cursor: pointer;
 }
 section{
     min-height: 100vh;
@@ -77,6 +84,13 @@ section{
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+    background-image: url('homebgg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    padding: 10rem 9% 10rem;
+
 }
 .home-content{
     display: flex;
@@ -85,9 +99,6 @@ section{
     text-align: center;
     justify-content: center;
     margin-top: 3rem;
-}
-span{
-    color: var(--main-color);
 }
 .logo span{
     color: var(--main-color);
@@ -112,7 +123,7 @@ span{
 .home-content h3{
     margin-bottom: 2rem;
     margin-top: 1rem;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 .home-content h1{
     font-size: 7rem;
@@ -128,7 +139,7 @@ span{
     height: 4.5rem;
     background: transparent;
     border: 0.2rem solid var(--main-color);
-    font-size: 2.5rem;
+    font-size: 3rem;
     border-radius: 50%;
     color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
@@ -141,7 +152,7 @@ span{
     background-color: var(--main-color);
 }
 .home-content p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
     max-width: 1000px;
 }
@@ -151,7 +162,7 @@ span{
     background: var(--main-color);
     box-shadow: 0 0 25px var(--main-color);
     border-radius: 4rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: white;
     border: 2px solid transparent;
     letter-spacing: 0.1rem;
@@ -202,6 +213,15 @@ span{
     border-left: 3px solid var(--bg-color);
     right: -8px;
     animation: cursor 0.6s infinite, typing 20s steps(14)infinite;
+}
+.about-content .text-animation span::after {
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--main-color);
+    right: -8px;
 }
 @keyframes cursor{
     to{
@@ -264,6 +284,12 @@ span{
     color: white;
     padding-top: 1rem;
     padding-bottom: 5rem;
+    background-image: url('pagesbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    padding: 10rem 9% 10rem;
 }
 .about h2 span{
     color: var(--main-color);
@@ -305,7 +331,7 @@ span{
     font-size: 2.6rem;
 }
 .about-content p{
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin: 2rem 0 3rem;
 }
 .about-content .text-animation span::before{
@@ -315,7 +341,7 @@ span{
 }
 .about-content  .text-animation span::after{
     content: '';
-    background-color: var(--second-bg-color);
+    background-color: black;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
@@ -331,7 +357,12 @@ span{
 }
 .education{
     padding: 100px 15px;
-    background: black;
+    background-image: url('pagesbg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    padding: 10rem 9% 10rem;
 }
 .education h2{
     margin-bottom: 5rem;
@@ -437,6 +468,12 @@ html::-moz-scrollbar-track {
 .skills{
     background: var(--second-bg-color);
     color: white;
+    background-image: url('pagesbg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    padding: 10rem 9% 10rem;
 }
 .skills h2{
     margin-bottom: 5rem;
@@ -447,19 +484,22 @@ html::-moz-scrollbar-track {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
+    justify-content: center;
     gap: 2.5rem;
+    margin: 0 auto; 
+    max-width: 1200px; 
 }
 .skills-box{
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
-    height: 300px; /* Adjusted height */
+    height: 300px; 
     border-radius: 3rem;
     cursor: pointer;
     border: 5px solid transparent;
     transition: 0.3s ease-in-out;
-    padding: 2rem; /* Adjusted padding */
+    padding: 2rem; 
 }
 .skills-box:hover{
     background: var(--second-bg-color);
@@ -473,18 +513,18 @@ html::-moz-scrollbar-track {
     text-align: center;
     justify-content: center;
     align-items: center;
-    max-height: 300px; /* Adjusted max height */
-    overflow: hidden; /* Added overflow property */
-    padding: 0 1rem; /* Adjusted padding */
+    max-height: 300px; 
+    overflow: hidden; 
+    padding: 0 1rem; 
 }
 .skills-info h4{
-    font-size: 2.5rem; /* Adjusted font size */
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.5;
-    margin-bottom: 1rem; /* Adjusted margin */
+    margin-bottom: 1rem; 
 }
 .skills-info p{
-    font-size: 1.4rem; /* Adjusted font size */
+    font-size: 1.6rem; 
     font-weight: 400;
     line-height: 1.6;
     margin: 0;
@@ -494,7 +534,13 @@ html::-moz-scrollbar-track {
 }
 
 .projects{
-    background: black;
+    background-image: url('pagesbg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    padding: 10rem 9% 10rem;
+    background-color: black;
 }
 .projects-box{
     background-size: cover;
@@ -544,8 +590,8 @@ html::-moz-scrollbar-track {
     font-size: 2.8rem;
 }
 .projects-item p{
-    font-size: 1.6rem;
-    text-align: cnter;
+    font-size: 2rem;
+    text-align: center;
 }
 #star{
     color: gold;
@@ -554,6 +600,12 @@ html::-moz-scrollbar-track {
 
 .contact{
     background-color: var(--second-bg-color);
+    background-image: url('pagesbg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+    padding: 10rem 9% 10rem;
 }
 .contact h2{
     margin-bottom: 3rem;
@@ -598,7 +650,7 @@ html::-moz-scrollbar-track {
         color: white;
     }
     .footer .social a{
-        font-size: 25px;
+        font-size: 2.5rem;
         color: white;
         border: 2px solid white;
         width: 42px;
@@ -618,7 +670,7 @@ html::-moz-scrollbar-track {
     .footer ul{
         margin-top: 0;
         padding: 0%;
-        font-size: 18px;
+        font-size: 2rem;
         line-height: 1.6;
         margin-bottom: 0;
         text-align: center;
@@ -638,7 +690,7 @@ html::-moz-scrollbar-track {
     .footer .copyright{
         margin-top: 50px;
         text-align: center;
-        font-size: 16px;
+        font-size: 2rem;
         color: white;
     }
     @media(max-width:1285px){
@@ -662,7 +714,7 @@ html::-moz-scrollbar-track {
             padding-bottom: 7rem;
         }
         .skills h2 {
-            margin-top: 1rem; /* Adjusted margin-top */
+            margin-top: 1rem; 
         }
         .footer{
             padding: 2rem 3%;
@@ -671,35 +723,35 @@ html::-moz-scrollbar-track {
             grid-template-columns: repeat(1,1fr);
         }
         .projects .heading {
-            margin-top: 5rem; /* Adjusted margin-top */
+            margin-top: 5rem; 
         }
         .contact h2 {
-            margin-top: 5rem; /* Adjusted margin-top */
+            margin-top: 5rem; 
         }
     }
     @media(max-width:895px){
+        html{
+            font-size: 55%;
+        }
         .education {
-            padding: 5rem 2rem; /* Adjusted padding */
+            padding: 5rem 2rem; 
         }
         .education .timeline-date{
             font-weight: bold;
             font-style: italic;
         }
         .timeline-items {
-            max-width: 100%; /* Adjusted maximum width */
+            max-width: 100%; 
         }
         .timeline-item:nth-child(odd),
         .timeline-item:nth-child(even) {
-            padding-right: 2rem; /* Adjusted padding */
-            padding-left: 2rem; /* Adjusted padding */
+            padding-right: 2rem;
+            padding-left: 2rem;
         }
         .timeline-dot {
             left: 50%;
-            transform: translateX(-50%); /* Centering the dot */
+            transform: translateX(-50%); 
         }
-    }
-    
-    @media(max-width:895px){
         #menu-icon{
             display: block;
         }
@@ -713,9 +765,11 @@ html::-moz-scrollbar-track {
             border-bottom-left-radius: 2rem;
             border-left: 2px solid var(--main-color);
             border-bottom: 2px solid var(--main-color);
+            display: none;
+            z-index: 99;
         }
         .navbar .active{
-            display: block;
+            display: flex;
         }
         .navbar a{
             display: block;
@@ -728,10 +782,10 @@ html::-moz-scrollbar-track {
             margin: 5rem 4rem;
         }
         .home-content h3{
-            font-size: 2.6rem;
+            font-size: 3rem;
         }
         .home-content h1{
-            font-size: 8rem;
+            font-size: 10rem;
             margin-top: 3rem;
             
         }
@@ -750,21 +804,23 @@ html::-moz-scrollbar-track {
             margin:  1rem 1rem;
         }
         .about img{
-            width: 52vw;
-            margin-top: 2rem;
-            margin-bottom: 3rem;
-        }
-        .about-img img {
-            width: 80%; /* Adjusted width */
-            max-width: 200px; /* Added max-width for smaller screens */
+            width: 80%; 
+            max-width: 200px; 
             margin-top: 8rem;
             margin-bottom: 3rem;
         }
+        .about-img img {
+            width: 100%;
+            max-width: 250px; 
+            margin-top: 8rem;
+            margin-bottom: 3rem;
+            
+        }
         .about .heading {
-            margin-top: -10rem; /* Adjusted margin-top */
+            margin-top: -10rem; 
         }
         .about h3{
-            margin-top: -5rem; /* Adjusted margin-top */
+            margin-top: -5rem;
         }
         .skills h2{
             margin-bottom: 3rem;

@@ -63,18 +63,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close the navbar when window is resized (for smaller screens)
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 895) {
-            // Reset navbar state on larger screens
+        if (window.innerWidth <= 895) {
+            // Close navbar when window width is smaller than or equal to 895px
             closeNavbar();
         }
     });
 
+    // Function to get sender email
     function getSenderEmail() {
-        return emailInput.value; 
+        if (emailInput) {
+            return emailInput.value; 
+        } else {
+            // Handle the case where emailInput is not available
+            return '';
+        }
     }
 
+    // Send email when contact form is submitted
     const contactForm = document.getElementById('contact-form');
-   
     contactForm.addEventListener('submit', function(event) {
         event.preventDefault();
 
