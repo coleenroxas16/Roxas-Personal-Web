@@ -5,9 +5,9 @@ Welcome to my simple responsive personal website. Upon viw=ewing, my website wil
 It is a platform responsible for sharing my underlying background. 
 
 # Features
--**About Me:** Learn more about who I am as an individual, and my visions. 
--**Portfolio:** View my education background, skills, and latest projects.
--**Contact:** Get in touch and send me a message through a contact form. Your message will be directed to my Gmail account. 
+**About Me:** Learn more about who I am as an individual, and my visions. 
+**Portfolio:** View my education background, skills, and latest projects.
+**Contact:** Get in touch and send me a message through a contact form. Your message will be directed to my Gmail account. 
 
 ## Technologies Used
 - HTML
