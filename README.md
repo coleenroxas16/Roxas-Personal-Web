@@ -1,14 +1,25 @@
 # Hi! I am Princess Coleen Roxas 👋
 
-Welcome to my Simple Responsive Personal Website.
+## Description
+Welcome to my simple responsive personal website. Upon viw=ewing, my website will showcase my portfolio, projects, and skills. 
+It is a platform responsible for sharing my underlying background. 
 
 # Features
-* A simple UI/UX Design
-* Easy page navigation
-* Ability for users to send messages directed in author's Gmail Account (Emailjs Tool)
-* Basic Transitions
+-**About Me:** Learn more about who I am as an individual, and my visions. 
+-**Portfolio:** View my education background, skills, and latest projects.
+-**Contact:** Get in touch and send me a message through a contact form. Your message will be directed to my Gmail account. 
 
-# Screenshots
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- EmailJS
+- Boxicons
+
+## Contributing 
+Contributions to this project are welcome. If you find any issues or would like to suggest improvements, you can contact me directly to my social media accounts linked in icons for fast transactions. 
+
+## Screenshots
 ![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/332fced9-e261-41ba-a5ef-a8e7057e7dd9)
 ![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/4caceebe-9bf5-46b0-8633-b2bd5b606178)
 ![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/22def259-005d-4779-b044-83afdc331392)
@@ -20,6 +31,9 @@ Welcome to my Simple Responsive Personal Website.
 ![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/993cadda-d2bf-4080-b1e9-baf28aa83728)
 ![image](https://github.com/coleenroxas16/Roxas-Personal-Web/assets/168961085/e6b8c952-bd84-4a8b-873c-6e577aee4d5c)
 
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+```
 
 
 
